@@ -27,7 +27,8 @@ def _to_host(value, default="localhost"):
 
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "localhost")
-FRONTEND_ORIGIN = _to_origin(os.environ.get("FRONTEND_URL"), default=FRONTEND_URL)
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
+FRONTEND_ORIGIN = _to_origin(FRONTEND_URL, default="http://localhost:5173")
 
 ALLOWED_HOSTS = [_to_host(RENDER_EXTERNAL_HOSTNAME)]
 
@@ -55,7 +56,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-STORAGE = {
+STORAGES = {
     'default': {
 
     "BACKEND": "django.core.files.storage.FileSystemStorage",
