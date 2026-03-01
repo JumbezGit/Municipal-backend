@@ -64,6 +64,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'municipal_tax.wsgi.application'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
 # Database
 # For development, we'll use SQLite for simplicity
 # For production, use PostgreSQL
