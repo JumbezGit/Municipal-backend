@@ -89,6 +89,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 #     }
 # }
 
+# Default database (used locally and as a fallback when DATABASE_URL is not set).
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
