@@ -9,3 +9,12 @@ services:
       - key: FRONTEND_URL
         value: "https://municipal-frontend-seven.vercel.app"
         sync: false
+      - key: RENDER_EXTERNAL_HOSTNAME
+        value: "municipal-backend.onrender.com"
+        sync: false
+      - key: DJANGO_SECRET_KEY
+        value: "replace-with-your-secret-key"
+        sync: false
+      - key: DATABASE_URL
+        value: "postgresql://municipal_db_xi0j_user:icYrMOsKZaksXc9md8M18osqttbdx9Q9@dpg-d6i77775r7bs73fb4p7g-a/municipal_db_xi0j"
+        sync: false
