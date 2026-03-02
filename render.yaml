@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: municipal-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn municipal_tax.wsgi --log-file -
+    envVars:
+      - key: FRONTEND_URL
+        value: "https://municipal-frontend-seven.vercel.app"
+        sync: false
