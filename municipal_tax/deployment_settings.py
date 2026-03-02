@@ -27,12 +27,15 @@ def _to_host(value, default="localhost"):
 
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "localhost")
-FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "https://municipal-frontend-seven.vercel.app")
 FRONTEND_ORIGIN = _to_origin(FRONTEND_URL, default="http://localhost:5173")
 
 ALLOWED_HOSTS = [_to_host(RENDER_EXTERNAL_HOSTNAME)]
 
-CSRF_TRUSTED_ORIGINS = [_to_origin(RENDER_EXTERNAL_HOSTNAME, default="http://localhost")]
+CSRF_TRUSTED_ORIGINS = [
+    _to_origin(RENDER_EXTERNAL_HOSTNAME, default="http://localhost"),
+    FRONTEND_ORIGIN,
+]
 
 DEBUG = False
 

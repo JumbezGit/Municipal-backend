@@ -10,7 +10,7 @@ services:
         value: "https://municipal-frontend-seven.vercel.app"
         sync: false
       - key: RENDER_EXTERNAL_HOSTNAME
-        value: "municipal-backend.onrender.com"
+        value: "municipal-backend-0lsj.onrender.com"
         sync: false
       - key: DJANGO_SECRET_KEY
         value: "23423267acf27ff0e64251b92a7137b7"
